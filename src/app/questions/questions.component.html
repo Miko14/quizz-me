@@ -1,20 +1,12 @@
+<h4>Skóre: {{score}}</h4>
 <h3>{{number}}. {{questions[number-1]}}</h3>
-<ul>
-  <li>
-    {{answers[index]}}
-    <input type="radio" name="ans" value="1">
-  </li>
-  <li>
-    {{answers[index+1]}}
-    <input type="radio" name="ans" value="2">
-  </li>
-  <li>
-    {{answers[index+2]}}
-    <input type="radio" name="ans" value="3">
-  </li>
-  <li>
-    {{answers[index+3]}}
-    <input type="radio" name="ans" value="4">
-  </li>
-</ul>
-<button (click)="submitAnswer()">Next</button>
+<mat-radio-group class="example-radio-group" [(ngModel)]="selectedAnswer">
+  <mat-radio-button class="example-radio-button" *ngFor="let answer of answers" [value]="answer">
+    {{answer}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>
+  <button mat-raised-button color="accent" class="btnColor" (click)="submitAnswer()">Next</button>
+  <button mat-fab disabled>Reset</button>
+</div>
+<pre>{{selectedAnswer}}</pre>
