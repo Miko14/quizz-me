@@ -28,11 +28,12 @@ export class QuestionsComponent implements OnInit {
   }
 
   submitAnswer(): void {
-    this.number++;
-    this.index += 4;
     if (this.number == 3){
       this.number = 1;
       this.index = 0;
+    } else {
+      this.number++;
+      this.index += 4;
     }
   }
 
