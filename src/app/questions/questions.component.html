@@ -1,0 +1,20 @@
+<h3>{{number}}. {{questions[number-1]}}</h3>
+<ul>
+  <li>
+    {{answers[index]}}
+    <input type="radiobutton" name="ans" value="1">
+  </li>
+  <li>
+    {{answers[index+1]}}
+    <input type="radiobutton" name="ans" value="2">
+  </li>
+  <li>
+    {{answers[index+2]}}
+    <input type="radiobutton" name="ans" value="3">
+  </li>
+  <li>
+    {{answers[index+3]}}
+    <input type="radiobutton" name="ans" value="4">
+  </li>
+</ul>
+<button (click)="submitAnswer()">Next</button>
