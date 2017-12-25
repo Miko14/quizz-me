@@ -3,7 +3,7 @@
     <h4>Skóre: {{score}}</h4>
     <h3>{{number}}. {{questions[number-1]}}</h3>
     <mat-radio-group class="example-radio-group leftAlign" [(ngModel)]="selectedAnswer">
-      <mat-radio-button class="example-radio-button" (keyup.enter)="onKeyUp()" *ngFor="let answer of answers" [value]="answer">
+      <mat-radio-button class="example-radio-button myRadio" (keyup.enter)="onKeyUp()" *ngFor="let answer of answers" [value]="answer">
         {{answer}}
       </mat-radio-button>
     </mat-radio-group>
