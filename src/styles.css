@@ -5,6 +5,9 @@
 body {
     margin: 20px auto;
     padding: 20px;
+    background-color: #223344; 
+    color: #eee;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
 }
 
 .example-radio-group {
@@ -18,4 +21,14 @@ body {
   
 .example-selected-value {
     margin: 15px 0;
+}
+
+.centerPage {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.leftAlign {
+    text-align: left;
 }
