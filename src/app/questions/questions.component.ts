@@ -51,6 +51,23 @@ export class QuestionsComponent implements OnInit {
     this.questions.splice(0, this.questions.length);
     this.answersBank.splice(0, this.answersBank.length);
     this.correctAnswers.splice(0, this.correctAnswers.length);
+    this.initializeContent();
+  }
+
+  initializeContent(): void {
+    this.questions = [
+      "Akej farby je obloha?",
+      "Aky deň je prvý v týždni?",
+      "Koľko dní má december?"
+    ];
+    this.answersBank = [
+      "modrá", "červená", "zelená", "fialová",
+      "utorok", "streda", "pondelok", "sobota",
+      "25", "30", "29", "31"
+    ];
+    this.correctAnswers = [
+      "modrá", "pondelok", "31"
+    ];
   }
 
   initializeAnswers(): void {
