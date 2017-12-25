@@ -10,17 +10,17 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
 }
 
-.example-radio-group {
+.radio-group {
     display: inline-flex;
     flex-direction: column;
 }
 
-.example-radio-button {
+.radio-button {
     margin: 5px;
 }
-  
-.example-selected-value {
-    margin: 15px 0;
+
+.myRadio .mat-radio-outer-circle {
+    border-color: rgb(123, 245, 2);
 }
 
 .centerPage {
@@ -31,8 +31,4 @@ body {
 
 .leftAlign {
     text-align: left;
-}
-
-.myRadio .mat-radio-outer-circle {
-    border-color: rgb(123, 245, 2);
 }
