@@ -3,18 +3,24 @@
     <h4>Skóre: {{score}}</h4>
     <h3>{{number}}. {{questions[number-1]}}</h3>
     <mat-radio-group class="radio-group leftAlign" [(ngModel)]="selectedAnswer">
-      <mat-radio-button class="radio-button myRadio" (keyup.enter)="onKeyUp()" *ngFor="let answer of answers" [value]="answer">
+      <mat-radio-button class="radio-button myRadio" (keyup.enter)="onKeyUp()"
+        *ngFor="let answer of answers" [value]="answer">
         {{answer}}
       </mat-radio-button>
     </mat-radio-group>
     <div>
-      <button mat-raised-button color="accent" class="btnColor" (click)="submitAnswer()">Next</button>
+      <button mat-raised-button color="accent" class="btnColor" (click)="submitAnswer()">
+        Next
+      </button>
       <button mat-fab (click)="reset()">Reset</button>
     </div>
     <pre>{{selectedAnswer}}</pre>
+    <input type="file" (change)="readFile($event.target)">
   </div>
   <div *ngIf="!notFinished">
     <h2>Tvoje skóre je: {{score}}</h2>
     <button mat-fab (click)="reset()">Reset</button>
+    <h1 *ngIf="score > 0">Gratulujeme !</h1>
+    <h1 *ngIf="score == 0">Nabudúce to už bude lepšie...</h1>
   </div>
 </div>
