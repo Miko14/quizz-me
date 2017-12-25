@@ -48,6 +48,9 @@ export class QuestionsComponent implements OnInit {
   
     this.notFinished = true;
     this.answers.splice(0, this.answers.length);
+    this.questions.splice(0, this.questions.length);
+    this.answersBank.splice(0, this.answersBank.length);
+    this.correctAnswers.splice(0, this.correctAnswers.length);
   }
 
   initializeAnswers(): void {
